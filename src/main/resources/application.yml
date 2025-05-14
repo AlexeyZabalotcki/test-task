@@ -1,0 +1,53 @@
+spring:
+  application:
+    name: test-task
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/testtask}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+
+  sql:
+    init:
+      platform: postgres
+      mode: always
+      continue-on-error: true
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+
+  cache:
+    type: ${SPRING_CACHE_TYPE:simple}
+
+  data:
+    redis:
+      host: ${SPRING_REDIS_HOST:localhost}
+      port: ${SPRING_REDIS_PORT:6379}
+      # time-to-live: 300000 # in ms
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui
+    urls:
+      - name: "Pioneer Pixel API"
+        url: /api-docs
+
+jwt:
+  secret: ${JWT_SECRET:uwoZUBfOJJEjd9mFJRCYGQ4G3KJrLt3X+Hycnmu7vrc=}
+  expiration-ms: ${JWT_EXPIRATION_MS:3600000}
+
+server:
+  port: 8080
+  error:
+    include-message: always
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
