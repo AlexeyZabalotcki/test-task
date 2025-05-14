@@ -139,7 +139,7 @@ Ensure Docker and Docker Compose are installed. After startup, the application i
 
 4. **API Docs**
 
-   Access Swagger UI at [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+   Access Swagger UI at [http://localhost:8080/swagger-ui/index.html#](http://localhost:8080/swagger-ui/index.html#)
 
 ## Running Tests
 
