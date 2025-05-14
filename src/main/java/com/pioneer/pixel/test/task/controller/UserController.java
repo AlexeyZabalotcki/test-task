@@ -56,7 +56,6 @@ public class UserController {
     public ResponseEntity<EmailDto> updateEmail(@AuthenticationPrincipal User user,
             @PathVariable Long emailId,
             @Valid @RequestBody UpdateEmailRequest request) {
-        // Map to service DTO
         EmailDto dto = new EmailDto();
         dto.setEmail(request.getEmail());
         return ResponseEntity.ok(userService.updateEmail(user.getId(), emailId, dto));
