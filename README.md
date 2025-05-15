@@ -163,6 +163,3 @@ Ensure Docker and Docker Compose are installed. After startup, the application i
 - **Security**: Simple JWT mechanism with minimal claims (userId), stateless sessions.
 - **Testing**: Testcontainers to simulate real PostgreSQL; MockMvc for controller integration tests.
 
----
-
-Good luck! Feel free to explore and extend the functionality as needed.
